@@ -1,19 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Img from './Img';
 import registerServiceWorker from './registerServiceWorker';
-import img from "./img4.jpg";
+import src from "./img4.jpg";
 
-const boost = [
-  {
-    x: 650,
-    y: 60,
-    width: 275,
-    height: 300,
-    weight: 10,
-  }
-];
-
-ReactDOM.render(<App src={img} boost={boost} />, document.getElementById('root'));
+ReactDOM.render(<Img src={src} x={0.55} y={0.15} />, document.getElementById('root'));
 registerServiceWorker();
