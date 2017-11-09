@@ -1,5 +1,6 @@
 import React from "react";
 import ReactCursorPosition from 'react-cursor-position';
+import { clamp } from "lodash";
 import Img from './Img';
 import src from "./img.jpg";
 
@@ -31,10 +32,12 @@ class App extends React.Component {
   };
 
   setCenter = (e) => {
-    this.setState({
-      x: this._percentX,
-      y: this._percentY,
-    });
+    const x = clamp(this._percentX, 0, 1);
+    const y = clamp(this._percentY, 0, 1);
+
+    console.log([x, y]);
+
+    this.setState({ x, y });
   };
 
   render() {
