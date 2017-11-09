@@ -9,6 +9,7 @@ class Img extends React.Component {
         style={{
           width: "100%",
           height: "100%",
+          position: "relative",
           backgroundSize: "cover",
           backgroundPosition: `${x * 100}% ${y * 100}%`,
           backgroundRepeat: "no-repeat",
